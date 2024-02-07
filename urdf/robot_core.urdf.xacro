@@ -32,6 +32,10 @@
     </xacro:inertial_box>
 </link>
 
+<gazebo reference="chassis_link">
+    <material>Gazebo/Blue</material>
+</gazebo>
+
 <link name="front_right_wheel">
     <visual>
         <geometry>
@@ -49,6 +53,10 @@
         <origin xyz="0 0 0" rpy="0 0 0"/>
     </xacro:inertial_cylinder>
 </link>
+
+<gazebo reference="front_right_wheel">
+    <material>Gazebo/Blue</material>
+</gazebo>
 
 <link name="front_left_wheel">
     <visual>
@@ -68,6 +76,10 @@
     </xacro:inertial_cylinder>
 </link>
 
+<gazebo reference="front_left_wheel">
+    <material>Gazebo/Blue</material>
+</gazebo>
+
 <link name="rear_right_wheel">
     <visual>
         <geometry>
@@ -85,6 +97,10 @@
         <origin xyz="0 0 0" rpy="0 0 0"/>
     </xacro:inertial_cylinder>
 </link>
+
+<gazebo reference="rear_right_wheel">
+    <material>Gazebo/Blue</material>
+</gazebo>
 
 <link name="rear_left_wheel">
     <visual>
@@ -104,6 +120,10 @@
     </xacro:inertial_cylinder>
 </link>
 
+<gazebo reference="rear_left_wheel">
+    <material>Gazebo/Blue</material>
+</gazebo>
+
 <joint name="base_to_chassis" type="fixed">
     <parent link="base_link"/>
     <child link="chassis_link"/>
@@ -119,7 +139,7 @@
 <joint name="fl_to_chassis" type="continuous">
     <parent link="chassis_link"/>
     <child link="front_left_wheel"/>
-    <origin xyz = "${chassis_length/2 - chassis_length/8} -${chassis_width - 0.1} -${chassis_height/2}" rpy= "${pi/2} 0 0"/>
+    <origin xyz = "${chassis_length/2 - chassis_length/8} -${chassis_width - 0.1} -${chassis_height/2}" rpy= "-${pi/2} 0 0"/>
     <axis xyz="0 0 1"/>
 </joint>
 
@@ -133,7 +153,7 @@
 <joint name="rl_to_chassis" type="continuous">
     <parent link="chassis_link"/>
     <child link="rear_left_wheel"/>
-    <origin xyz = "-${chassis_length/2 - chassis_length/8} -${chassis_width - 0.1} -${chassis_height/2}" rpy= "${pi/2} 0 0"/>
+    <origin xyz = "-${chassis_length/2 - chassis_length/8} -${chassis_width - 0.1} -${chassis_height/2}" rpy= "-${pi/2} 0 0"/>
     <axis xyz="0 0 1"/>
 </joint>
 
