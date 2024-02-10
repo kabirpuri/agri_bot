@@ -55,7 +55,7 @@
 </link>
 
 <gazebo reference="front_right_wheel">
-    <material>Gazebo/Blue</material>
+    <material>Gazebo/Black</material>
 </gazebo>
 
 <link name="front_left_wheel">
@@ -77,7 +77,7 @@
 </link>
 
 <gazebo reference="front_left_wheel">
-    <material>Gazebo/Blue</material>
+    <material>Gazebo/Black</material>
 </gazebo>
 
 <link name="rear_right_wheel">
@@ -99,7 +99,7 @@
 </link>
 
 <gazebo reference="rear_right_wheel">
-    <material>Gazebo/Blue</material>
+    <material>Gazebo/Black</material>
 </gazebo>
 
 <link name="rear_left_wheel">
@@ -121,7 +121,7 @@
 </link>
 
 <gazebo reference="rear_left_wheel">
-    <material>Gazebo/Blue</material>
+    <material>Gazebo/Black</material>
 </gazebo>
 
 <joint name="base_to_chassis" type="fixed">
