@@ -10,6 +10,7 @@ material RepeatedGrass/Diffuse
         // Relative to the location of the material script
         texture Grass.png
         // Repeat the texture over the surface (4 per face)
+        scale 10 10
       }
     }
   }
