@@ -11,8 +11,8 @@
         <left_joint>rl_to_chassis</left_joint>
         <right_joint>rr_to_chassis</right_joint>
 
-        <wheel_separation>0.375</wheel_separation>
-        <wheel_separation>0.375</wheel_separation>
+        <wheel_separation>0.2</wheel_separation>
+        <wheel_separation>0.2</wheel_separation>
         <wheel_diameter>0.2</wheel_diameter>
         <wheel_diameter>0.2</wheel_diameter>
 

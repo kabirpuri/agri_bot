@@ -11,8 +11,18 @@
 <xacro:property name="wheel_radius"    value = "0.1"/>
 <xacro:property name="wheel_thickness" value = "0.1"/>
 <xacro:property name="wheel_mass"      value = "0.1"/>
+<xacro:property name="wheel_offset_y"  value = "0.2"/>
 
 <link name="base_link"/>
+
+<joint name="base_footprint_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="base_footprint"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+</joint>
+
+<link name="base_footprint">
+</link>
 
 <link name="chassis_link">
     <visual>
@@ -132,29 +142,29 @@
 <joint name="fr_to_chassis" type="continuous">
     <parent link="chassis_link"/>
     <child link="front_right_wheel"/>
-    <origin xyz = "${chassis_length/2 - chassis_length/8} ${chassis_width - 0.1} -${chassis_height/2}" rpy= "${pi/2} 0 0"/>
+    <origin xyz = "${chassis_length/2 - chassis_length/8} -${wheel_offset_y} -${chassis_height/2}" rpy= "${pi/2} 0 0"/>
     <axis xyz="0 0 1"/>
 </joint>
 
 <joint name="fl_to_chassis" type="continuous">
     <parent link="chassis_link"/>
     <child link="front_left_wheel"/>
-    <origin xyz = "${chassis_length/2 - chassis_length/8} -${chassis_width - 0.1} -${chassis_height/2}" rpy= "-${pi/2} 0 0"/>
-    <axis xyz="0 0 1"/>
+    <origin xyz = "${chassis_length/2 - chassis_length/8}  ${wheel_offset_y} -${chassis_height/2}" rpy= "-${pi/2} 0 0"/>
+    <axis xyz="0 0 -1"/>
 </joint>
 
 <joint name="rr_to_chassis" type="continuous">
     <parent link="chassis_link"/>
     <child link="rear_right_wheel"/>
-    <origin xyz = "-${chassis_length/2 - chassis_length/8} ${chassis_width - 0.1} -${chassis_height/2}" rpy= "${pi/2} 0 0"/>
+    <origin xyz = "-${chassis_length/2 - chassis_length/8} -${wheel_offset_y} -${chassis_height/2}" rpy= "${pi/2} 0 0"/>
     <axis xyz="0 0 1"/>
 </joint>
 
 <joint name="rl_to_chassis" type="continuous">
     <parent link="chassis_link"/>
     <child link="rear_left_wheel"/>
-    <origin xyz = "-${chassis_length/2 - chassis_length/8} -${chassis_width - 0.1} -${chassis_height/2}" rpy= "-${pi/2} 0 0"/>
-    <axis xyz="0 0 1"/>
+    <origin xyz = "-${chassis_length/2 - chassis_length/8} ${wheel_offset_y} -${chassis_height/2}" rpy= "-${pi/2} 0 0"/>
+    <axis xyz="0 0 -1"/>
 </joint>
 
 </robot>

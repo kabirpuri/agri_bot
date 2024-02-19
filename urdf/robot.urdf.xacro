@@ -9,5 +9,7 @@
     <xacro:include filename="$(find agri_bot)/urdf/gazebo_control.xacro" />
     <xacro:include filename="$(find agri_bot)/urdf/s_camera.xacro" />
     <xacro:include filename="$(find agri_bot)/urdf/s_lidar.xacro" />
+    <xacro:include filename="$(find agri_bot)/urdf/s_gps.xacro" />
+    <xacro:include filename="$(find agri_bot)/urdf/s_imu.xacro" />
     
 </robot>
