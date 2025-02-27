@@ -1,4 +1,2 @@
-# Agricultural Farming Robot for Disease Detection (AgriBot)
+# Agricultural Farming Robot for leafDisease Detection using GoogleNet (AgriBot)
 
-### Installation and Building
-1. 
