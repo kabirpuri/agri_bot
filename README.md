@@ -1,7 +1,5 @@
 # Agri Bot
-Agri Bot is a project aimed at revolutionizing agriculture through the use of advanced technologies. This project leverages Jupyter Notebooks, Python, and CMake to provide a comprehensive solution for modern farming challenges.
-
-The primary focus of Agri Bot is to enhance agricultural productivity and efficiency by integrating data analysis, machine learning, and automation. The project includes various modules designed to monitor crop health, predict yields, optimize resource usage, and automate farming tasks.
+The primary focus of Agri Bot is to find leaf diseases in crops without the need of any labour
 
 # Key features of Agri Bot include:
 
